@@ -1,0 +1,5 @@
+# Line endings: every text file is LF, in Git and on disk, whatever Git's
+# own autocrlf setting says. Batch scripts (.bat, .cmd) need CRLF.
+* text=auto eol=lf
+*.bat text eol=crlf
+*.cmd text eol=crlf

@@ -1,0 +1,4 @@
+# Personal profiles and answers files stay on the owner's machine.
+# Only the example is shared.
+personal/*
+!personal/example.psd1

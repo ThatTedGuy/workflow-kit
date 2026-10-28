@@ -1,0 +1,13 @@
+#!/bin/sh
+# Git pre-commit hook: runs the kit's license check on what's staged, and
+# blocks the commit if an asset, vendored file, or package has no CREDITS.md
+# entry. Turned on once per clone with: git config core.hooksPath .githooks
+# The owner can skip it with git commit --no-verify. Claude never does.
+# This file is project-owned: add project checks below.
+
+root="$(git rev-parse --show-toplevel)" || exit 1
+sh "$root/.claude/kit/tools/run-ps.sh" "$root/.claude/kit/tools/check-credits.ps1" -Staged || {
+    echo ""
+    echo "Commit blocked by the license check (.githooks/pre-commit)."
+    exit 1
+}
