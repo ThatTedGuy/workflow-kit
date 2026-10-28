@@ -32,6 +32,8 @@ To install without `/setup`, see "Install by hand".
 
 What a project gets. `.claude/kit/RULES.md` in the project has the full rules.
 
+Stages use the film and game-dev sense: pre-production is planning, production is building v1, and post-production is everything after release. "Production" here doesn't mean a live server.
+
 | Command | When |
 | --- | --- |
 | `/pre-pro` | Pre-production: turn ideas into the design doc and roadmap, research a question, or build a throwaway prototype. `/pre-pro retrofit` drafts them from an existing project's code. Later, plan each update |
