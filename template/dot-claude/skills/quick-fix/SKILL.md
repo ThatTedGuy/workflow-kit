@@ -40,6 +40,7 @@ If the input is blank, ask what to fix. If the request fails a limit, say which 
 - Run the License check. It must pass (a quick fix adds no assets or packages, so a failure means the fix is out of bounds).
 - Run the Doc check if any doc changed.
 - Review your own diff (`git diff`): it does only what was asked, respects the technical principles and code conventions in CLAUDE.md, and changes at most 3 files.
+- Anything listed for `/quick-fix` under "Project additions to the commands" in CLAUDE.md.
 
 ## 4. Commit
 

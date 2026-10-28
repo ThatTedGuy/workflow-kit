@@ -30,6 +30,7 @@ Input: $ARGUMENTS
   - If it is a new idea, it becomes a row in `docs/AFTER_V1.md`, not code.
 - **Credits first:** before adding any third-party asset, library, dataset, or borrowed code, add its `CREDITS.md` entry (rule 6).
 - **Conventions:** follow the technical principles and code conventions in CLAUDE.md. When rule 7 is on, use placeholders of the kinds under "Placeholder kinds" in CLAUDE.md, such as `TODO-CONTENT`, for the content it names.
+- Anything listed for `/code` under "Project additions to the commands" in CLAUDE.md.
 - **Docs you must not touch here:**
   - Do not edit `docs/DESIGN.md`.
   - Do not tick anything in `docs/ROADMAP_STATUS.md`; the review session does that.

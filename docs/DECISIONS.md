@@ -171,3 +171,10 @@ Add-only. Date, decision, reason, options rejected, who decided.
 - **Reason:** the public repo shouldn't show Ted's email, home folder layout, or private project names, and the old commits had all three.
 - **Rejected:** rewriting the old commits with `git filter-repo` (keeps the history, but needs an extra tool and a check of every commit); keeping the game's name.
 - **Decided by:** Ted.
+
+## 2026-10-28 — Version 1.0.1, and the shipped "Unreleased" changes folded into 1.0.0
+
+- **Decision:** `/code`, `/review-fix-commit`, `/talk` and `/quick-fix` each name their list under "Project additions to the commands", like `/plan-it` and `/qa-docreview`. The "Unreleased" changelog entries, which shipped in the 1.0.0 template, move into the 1.0.0 entry. The new 1.0.1 entry lists only the command fix, and `VERSION` is 1.0.1. "Unreleased" stays as an empty heading for the next changes.
+- **Reason:** an explicit line in each command is harder to miss than the general line in `RULES.md`. Update prints only numbered entries newer than the project's version, so listing the shipped changes under 1.0.1 would have shown 1.0.0 projects changes they already have, with "Required" manual steps. A patch with no manual steps also fits the changelog's version rules.
+- **Rejected:** putting all the Unreleased changes under 1.0.1.
+- **Decided by:** Ted.

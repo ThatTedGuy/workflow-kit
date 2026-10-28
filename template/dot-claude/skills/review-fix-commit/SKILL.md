@@ -30,6 +30,7 @@ Check each point, and note what you find:
 - **Docs:**
   - Any tool that was added or changed is documented.
   - `docs/DESIGN.md` was not edited, unless the owner asked for it.
+- Anything listed for `/review-fix-commit` under "Project additions to the commands" in CLAUDE.md.
 
 ## 3. License check (blocking)
 

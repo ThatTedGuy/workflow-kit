@@ -24,6 +24,7 @@ Input: $ARGUMENTS
 - Read the top of `docs/ROADMAP_STATUS.md`: the stage and the next sub-step.
 - If the input names a topic, search for it (Grep for a heading or name), then read only that range. Follow the Token use rules in `RULES.md`: no whole long docs.
 - If the input is blank, ask the owner what's on their mind.
+- Anything listed for `/talk` under "Project additions to the commands" in CLAUDE.md, within the read-only rule above.
 
 ## 2. Talk
 
