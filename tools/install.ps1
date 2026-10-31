@@ -28,7 +28,7 @@ $KitRoot = Split-Path -Parent $PSScriptRoot
 $Template = Join-Path $KitRoot 'template'
 $Version = (Get-Content -LiteralPath (Join-Path $KitRoot 'VERSION') -Raw).Trim()
 
-# Kit-owned: what an update replaces. Keep in step with RULES.md and CLAUDE.md.
+# Kit-owned: what an update replaces. Keep in step with RULES.md and the README.
 $KitSkills = @('code', 'plan-it', 'pre-pro', 'qa-docreview', 'quick-fix', 'review-fix-commit', 'talk')
 $KitOwnedTemplatePaths = @('dot-claude/kit') + ($KitSkills | ForEach-Object { "dot-claude/skills/$_" })
 

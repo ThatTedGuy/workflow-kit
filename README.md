@@ -24,7 +24,6 @@ To install without `/setup`, see "Install by hand".
 | `tools/install.ps1` | Install, update, and migrate |
 | `tools/test-install.ps1` | Installs into a temp folder and checks the result |
 | `tools/check-template.ps1` | Fails if a loadable name slips into `template/` or `addons/` |
-| `docs/` | The kit's own design doc, roadmap, and decision log |
 
 **Kit-owned vs project-owned.** In a project, `.claude/kit/` and the kit's skills in `.claude/skills/` (`code`, `plan-it`, `pre-pro`, `qa-docreview`, `quick-fix`, `review-fix-commit`, `talk`) are kit-owned: an update replaces them, so don't edit them there. Everything else, including `CLAUDE.md`, `.claude/kit-settings.psd1`, `.githooks/`, `docs/`, and any skills you add, belongs to the project and is never touched by an update.
 
