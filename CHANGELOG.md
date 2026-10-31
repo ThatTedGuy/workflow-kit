@@ -9,7 +9,18 @@ Versions: **patch** fixes kit-owned files only; **minor** adds features, with an
 
 ## Unreleased
 
-Nothing yet.
+### Kit-owned changes
+
+- None. Installed projects are unchanged.
+
+### Added
+
+- New `obsidian` add-on (`addons/obsidian/`): sets a project up to open in Obsidian as well. Links between docs stay standard Markdown with relative paths, renames update links, and code folders are excluded from the vault. It changes only project-owned files: `CLAUDE.md`, `.gitignore`, and `.obsidian/app.json`.
+- `/setup` asks for add-ons in two questions, "Kind of project" and "Tools", since one question holds at most 4 options.
+
+### Manual steps
+
+- None. To add Obsidian to an existing project, ask Claude there: "Apply the obsidian add-on, following `addons/obsidian/README.md` in the kit."
 
 ## 1.0.1 — 2026-10-28
 

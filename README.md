@@ -18,7 +18,7 @@ To install without `/setup`, see "Install by hand".
 | Path | What it is |
 | --- | --- |
 | `template/` | The product that install copies into a project. Its names are disguised (`CLAUDE.template.md`, `dot-claude/`, `dot-gitattributes`) so Claude Code never loads them here |
-| `addons/` | Optional add-ons: `creative-content`, `game`, `unity`, `windows` (see "Add-ons") |
+| `addons/` | Optional add-ons: `creative-content`, `game`, `obsidian`, `unity`, `windows` (see "Add-ons") |
 | `.claude/skills/setup/` | The `/setup` command |
 | `personal/` | Your personal profile and answers files, which Git ignores. `example.psd1` shows the format |
 | `tools/install.ps1` | Install, update, and migrate |
@@ -51,6 +51,7 @@ The core kit names no language, operating system, engine, or kind of project. Ad
 | --- | --- |
 | `creative-content` | Projects with content the owner writes: names, user-facing text, story. Claude uses placeholders such as `TODO-CONTENT` and never invents it |
 | `game` | Games: lore and in-game text placeholders, the AI-content rule, a performance budget, Git LFS. Needs `creative-content` |
+| `obsidian` | Projects whose docs you also read in Obsidian: standard Markdown links, code folders kept out of the vault. Obsidian is optional and not included |
 | `unity` | Unity projects: Unity's file and package types for the license check |
 | `windows` | Running the kit's scripts in Windows PowerShell 5.1 when PowerShell 7 isn't installed |
 

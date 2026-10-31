@@ -26,13 +26,16 @@ If `personal/profile.psd1` exists, read it. Its owner, Kit settings and add-ons 
    - Explanation level: `beginner` (Recommended: explains every choice and term, and gives step-by-step test instructions) or `experienced` (brief and technical).
    - Token use: `strict` (Recommended: reads only what's needed, to stretch a usage limit) or `normal` (reads whole files when that's simpler).
    - Multiple-choice questions: `on` (Recommended: clickable options) or `off` (questions in chat as a numbered list).
-5. **Add-ons** (multi-select; list the folders in `addons/`, with each README's first paragraph as the description):
-   - `creative-content`: the owner writes the names, user-facing text and story, and Claude uses placeholders.
-   - `game`: lore, the AI-content rule, a performance budget, Git LFS. Needs `creative-content`.
-   - `unity`: Unity's file and package types for the license check.
-   - `windows`: run the kit's scripts in Windows PowerShell 5.1. Recommend it on Windows when `pwsh` isn't installed (`Get-Command pwsh`).
+5. **Add-ons** (list the folders in `addons/`, with each README's first paragraph as the description). A question holds at most 4 options, so ask two multi-select questions in the same prompt:
+   - **Kind of project:**
+     - `creative-content`: the owner writes the names, user-facing text and story, and Claude uses placeholders.
+     - `game`: lore, the AI-content rule, a performance budget, Git LFS. Needs `creative-content`.
+     - `unity`: Unity's file and package types for the license check.
+   - **Tools:**
+     - `windows`: run the kit's scripts in Windows PowerShell 5.1. Recommend it on Windows when `pwsh` isn't installed (`Get-Command pwsh`).
+     - `obsidian`: set the project up to open in Obsidian too: standard Markdown links, code folders excluded. Recommend it only if the owner uses Obsidian, or the project already has an `.obsidian/` folder.
 
-   Pre-select the profile's add-ons. If `game` is picked without `creative-content`, add it and say so.
+   An add-on folder not listed here goes under "Tools". Pre-select the profile's add-ons. If `game` is picked without `creative-content`, add it and say so.
 
 ## 3. Existing project: make room
 
