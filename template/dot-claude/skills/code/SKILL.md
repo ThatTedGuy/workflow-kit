@@ -37,7 +37,7 @@ Input: $ARGUMENTS
 
 ## 3. Check the work
 
-- Run the Tests and Build checks from the "Checks" table in CLAUDE.md.
+- Run the Tests and Build checks from the "Checks" table in CLAUDE.md, including the tests the plan's "Tests" section lists.
 - Run the License check from the same table and fix whatever it reports. If the table says `none`, compare the diff's new packages and files with `CREDITS.md` by hand.
 - Try the result yourself as far as you can, for example by running it.
 

@@ -7,11 +7,13 @@ One entry per kit version. `tools/install.ps1 -Update` prints every entry newer 
 
 Versions: **patch** fixes kit-owned files only; **minor** adds features, with any manual steps optional; **major** has at least one required manual step. Projects on the old mixed layout count as 0.x.
 
-## Unreleased
+## 1.1.0 — 2026-10-31
 
 ### Kit-owned changes
 
-- None. Installed projects are unchanged.
+- **Tests are planned and reported.** A plan's "Tests" section says what each test checks and the command that runs it. With no test runner yet, `/plan-it` says so, suggests one that fits the stack, and asks whether to set it up in this sub-step or test by hand for now, instead of skipping tests silently. `/code` runs the tests the plan lists. `/review-fix-commit` checks they exist and ran, records each check's result in "Review notes", and reports the test results to the owner.
+- **Every result ends with an owner checklist.** Rule 8 in `RULES.md` makes test steps a short numbered checklist the owner can follow alone: what to open, what to do, and what they should see. The plan's "How the owner tests it" follows it, including work with nothing to see yet (run the tests; here's what passing looks like). `/review-fix-commit` ends with that checklist, matched to what was built.
+- **Plan approval explains the approach.** `/plan-it` now tells the owner the approach, its main tradeoffs, and the options passed over and why, before asking for approval. The plan's "Approach" section names the tradeoffs too. How plain the words are still follows "Explanation level": `beginner` is non-technical.
 
 ### Added
 
@@ -20,7 +22,9 @@ Versions: **patch** fixes kit-owned files only; **minor** adds features, with an
 
 ### Manual steps
 
-- None. To add Obsidian to an existing project, ask Claude there: "Apply the obsidian add-on, following `addons/obsidian/README.md` in the kit."
+- None. Plans already in `docs/plans/` keep working; new plans use the new sections.
+- Optional: a project whose Tests check in `CLAUDE.md` is `none` or still `TODO-DESIGN` will see a test-runner question in its next plan. To settle it ahead of time, fill in the Tests row and the "Tests" line under "Code conventions".
+- To add Obsidian to an existing project, ask Claude there: "Apply the obsidian add-on, following `addons/obsidian/README.md` in the kit."
 
 ## 1.0.1 — 2026-10-28
 

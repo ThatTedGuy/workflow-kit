@@ -55,13 +55,15 @@ Save it to `docs/plans/<sub-step id>-<short-slug>.md`, following [plan-template.
 - **Credits:** list every third-party asset, library, dataset, or piece of borrowed code under "Credits needed", with its license. A license that is not CC0, public domain, CC-BY, MIT, BSD, Apache-2.0, or zlib is a question for the owner.
 - **Creative content (when rule 7 is on):** every piece of the content named under "Placeholder kinds" in CLAUDE.md, such as names and user-facing text, is a placeholder of a kind listed there, such as `TODO-CONTENT` (RULES.md rule 7).
 - **Build parts:** size the build for `/code` sessions that stay short (RULES.md, "Token use"). If the work is more than one session can build comfortably, split it into parts A, B, and so on, under "Build parts". A part is roughly what about 40 tool calls can build and test: as a guide, 2 to 4 new or heavily changed code files with their tests. Each part ends with the build passing, and with something the owner or the tests can check. Small sub-steps are one part.
+- **Tests:** say how each build part will be tested: the automated tests to add or run, and the owner's checklist under "How the owner tests it". If the project has no test runner yet (the Tests check in CLAUDE.md is `none` or still `TODO-DESIGN`), never skip this silently: say so in the plan, suggest a runner that fits the stack, and add an open question. Its options are setting the runner up in this sub-step (it then counts as IN, like other small helpers, and needs its `CREDITS.md` entry), or testing by hand for now.
 - **Status:** set it to `Draft`.
 
 ## 5. Hand off to the owner
 
-Tell the owner, in plain language:
+Tell the owner, in plain language (RULES.md rule 8, at the "Explanation level"):
 
 - What the plan does.
+- The approach: how it will be built, the main tradeoffs, and the options passed over and why.
 - The scope verdicts.
 - Any choices the owner needs to make.
 - How the owner will test the result.

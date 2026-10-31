@@ -17,7 +17,7 @@ Flagged and left out: <the items, or "none">
 
 ## Approach
 
-The steps in plain language. Explain each choice and the options passed over.
+The steps in plain language. Explain each choice, its main tradeoffs (what it gains, and what it costs or risks), and the options passed over and why.
 
 ## Build parts
 
@@ -37,11 +37,11 @@ Write "None" if nothing is third-party.
 
 ## Tests
 
-The automated tests to add or run.
+The automated tests to add or run, what each one checks, and the command that runs them (the Tests check in CLAUDE.md). If the project has no test runner yet, say so here, name one that fits the stack, and ask about it under "Open questions for the owner" (`/plan-it` section 4).
 
 ## How the owner tests it
 
-Exact steps: what to open, what to click or type, and what should happen. If any step uses a terminal, step 1 is the `cd` into the repo path from CLAUDE.md (RULES.md rule 8).
+A short numbered checklist the owner can follow alone (RULES.md rule 8). Exact steps: what to open, what to click or type, and what should happen. If any step uses a terminal, step 1 is the `cd` into the repo path from CLAUDE.md. If the work has nothing to see yet, such as internal logic, the checklist runs the tests and says what passing looks like.
 
 ## Decisions to log
 

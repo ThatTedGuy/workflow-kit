@@ -26,7 +26,7 @@ Check each point, and note what you find:
 - **Plan match:** the diff does what the plan or report says, and nothing more. Remove anything that is OUT or UNLISTED for v1 instead of committing it. Parked ideas go to `docs/AFTER_V1.md`.
 - **Correctness:** bugs, edge cases, error handling, and crashes.
 - **Principles:** every technical principle and code convention in CLAUDE.md holds. When rule 7 is on, the content it names uses placeholders of the kinds under "Placeholder kinds" in CLAUDE.md, such as `TODO-CONTENT`, and none was invented.
-- **Tests and build:** run the Tests and Build checks from the "Checks" table in CLAUDE.md. They must pass. New logic has tests.
+- **Tests and build:** run the Tests and Build checks from the "Checks" table in CLAUDE.md. They must pass. New logic has tests, and for a plan, the tests its "Tests" section lists exist and ran. Record each check's result, such as how many tests passed, in "Review notes". If the project has no test runner yet, say so there.
 - **Docs:**
   - Any tool that was added or changed is documented.
   - `docs/DESIGN.md` was not edited, unless the owner asked for it.
@@ -77,6 +77,6 @@ In plain language:
 
 - What was committed.
 - What the review fixed.
-- The license check result.
-- Exactly how to test it. If it uses a terminal, start with the `cd` into the repo folder (RULES.md rule 8).
+- The test results, and the license check result.
+- Exactly how to test it, as a short numbered checklist (RULES.md rule 8): for a plan, its "How the owner tests it" steps, matching what was built; for QA fixes, steps written from "Fixes made". If it uses a terminal, start with the `cd` into the repo folder.
 - Which sub-step is next.
