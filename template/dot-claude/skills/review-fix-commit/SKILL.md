@@ -57,7 +57,8 @@ Run the License check from the "Checks" table in CLAUDE.md. If it says `none`, c
 ## 5. Update the docs (same commit as the work)
 
 - **`docs/ROADMAP_STATUS.md`:**
-  - Tick each finished sub-step `[x]`, and update the "Next sub-step" line.
+  - Tick each finished sub-step `[x]`, and update the "Next sub-step" line. Any note on it is one or two lines that name the plan, not a retelling of it (RULES.md rule 5).
+  - Each fact goes in its one home (RULES.md, "Each fact in one home"): the review's decisions in `DECISIONS.md`, a system's changes in its reference doc, and what each check showed in the plan's "Review notes". Leave older notes as they are.
   - Tick a step's "Done when" line only once it is true. If the owner has to verify it, leave it open, add a dated note, and say so.
 - **`docs/DECISIONS.md`:** add an entry for each decision made (date, decision, reason, rejected options, who decided). Read only the last few entries, then add yours at the bottom.
 - **The plan or QA report:** fill in "Review notes" and set its status to `Done`.

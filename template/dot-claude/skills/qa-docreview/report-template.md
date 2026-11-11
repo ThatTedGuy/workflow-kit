@@ -12,6 +12,10 @@ Two or three plain sentences on overall health, and anything blocking.
 
 <the problems and notes from the doc check>
 
+## Tests and build
+
+<the results; or, when the focus skips them: "Not run", the last passing run and its date, and what has changed since>
+
 ## Findings
 
 | ID | Type | Severity | Where | What is wrong | Suggested fix | Owner |

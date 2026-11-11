@@ -7,6 +7,18 @@ One entry per kit version. `tools/install.ps1 -Update` prints every entry newer 
 
 Versions: **patch** fixes kit-owned files only; **minor** adds features, with any manual steps optional; **major** has at least one required manual step. Projects on the old mixed layout count as 0.x.
 
+## Unreleased
+
+### Kit-owned changes
+
+- **QA runs the tests and build only when its focus needs them.** `/qa-docreview` runs the Tests and Build checks, and tries the project, at a phase gate or when the focus is whether the code works. For any other focus, such as the workflow, the docs, or a hunt for a fault's cause, it skips them, and the report's new "Tests and build" section gives the last passing run, its date, and what has changed since.
+- **Short roadmap notes, each fact in one home.** Rule 5 in `RULES.md` keeps a finished sub-step's note in `ROADMAP_STATUS.md` to one or two lines that name the plan. A new rule, "Each fact in one home", puts decisions in `DECISIONS.md`, how a system works in its reference doc, and what's done and left in the plan's or report's notes; other docs point there. `/review-fix-commit` and `/code` follow it. Older notes stay as they are.
+- **The checkpoint carries on.** At about 60 tool calls, `/code` pauses where the build passes, updates "Coding notes", and carries on to the end of the part or batch when what's left is what the plan or report listed, instead of handing off. It asks the owner only about added work the plan didn't list: finish it now, make the rest a new sub-step, accept it as it is (logged), or park it. The next part still gets a fresh session.
+
+### Manual steps
+
+- None.
+
 ## 1.1.0 — 2026-10-31
 
 ### Kit-owned changes

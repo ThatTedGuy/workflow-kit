@@ -1,6 +1,6 @@
 ---
 name: qa-docreview
-description: Quality track, session 1 of 3. Tests the build, checks code and docs for drift from DESIGN.md, and writes a findings report to docs/qa/. Changes no code. Run at every phase gate and whenever bugs or doc drift pile up.
+description: Quality track, session 1 of 3. Checks code and docs for drift from DESIGN.md, tests the build when the focus needs it, and writes a findings report to docs/qa/. Changes no code. Run at every phase gate and whenever bugs or doc drift pile up.
 argument-hint: "[focus, e.g. 'Phase 1 gate' or 'login'; blank = everything built so far]"
 disable-model-invocation: true
 ---
@@ -45,8 +45,7 @@ For each mismatch, quote the `DESIGN.md` line and give the file and line in the 
 
 ## 3. QA
 
-- Run the Tests and Build checks from the "Checks" table in CLAUDE.md.
-- Run the project and try what it does, as far as you can.
+- **Tests and build only when the focus needs them.** At a phase gate, or when the focus is whether the code works, run the Tests and Build checks from the "Checks" table in CLAUDE.md, then run the project and try what it does, as far as you can. For any other focus, such as the workflow, the docs, or a hunt for a fault's cause, skip them. The report then gives the last passing run, when it was (from the newest "Review notes" or `git log`), and what has changed since.
 - Anything listed for `/qa-docreview` under "Project additions to the commands" in CLAUDE.md.
 - Record every bug with steps to reproduce it.
 

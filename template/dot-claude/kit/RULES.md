@@ -12,7 +12,7 @@ The workflow kit's rules, the same in every project. `CLAUDE.md` imports this fi
 2. **Check scope before planning.** If a task is not in "v1 scope", or is listed in "Not in v1", stop and flag it instead of building it.
 3. **New ideas go in the parking lot** (`docs/AFTER_V1.md`), never into the code. Only the owner moves items between v1 and After v1.
 4. **Log every decision** in `docs/DECISIONS.md`: date, decision, reason, options rejected, and who decided.
-5. **Mark finished sub-steps** in `docs/ROADMAP_STATUS.md` in the same commit as the work, and update its "Next sub-step" line.
+5. **Mark finished sub-steps** in `docs/ROADMAP_STATUS.md` in the same commit as the work, and update its "Next sub-step" line. A note for a finished sub-step is one or two lines that name its plan, not a retelling of the plan.
 6. **Licenses:** use only CC0, public domain, CC-BY, MIT, BSD, Apache-2.0, or zlib. Log every third-party asset, library, dataset, or borrowed code in `CREDITS.md` *before* using it. Ask the owner before using anything with another license, such as GPL, CC-BY-SA, NonCommercial, or an unclear one.
 7. **Creative content, when the project turns it on.** Off unless `CLAUDE.md` has a "Placeholder kinds" section, as the creative-content add-on adds. When it's on, the owner owns the content that section names, such as names, user-facing text, and story: use its placeholders, such as `TODO-CONTENT: product name`, and never invent that content.
 8. **Explain choices in plain language**, and tell the owner exactly how to test each result, at the "Explanation level" in Kit settings. Test steps are a short numbered checklist the owner can follow alone: what to open, what to do, and what they should see. When test steps use a terminal, the first command moves into the repo folder: `cd` to the repo path in `CLAUDE.md`. This goes in plans, QA reports, and chat.
@@ -21,6 +21,7 @@ The workflow kit's rules, the same in every project. `CLAUDE.md` imports this fi
 Also:
 
 - **Never edit `docs/DESIGN.md` unless the owner asks.** If it looks wrong or out of date, list that as a note for the owner.
+- **Each fact in one home.** A decision goes in `docs/DECISIONS.md`, how a system works in its reference doc (under "Project docs" in `CLAUDE.md`), and what's done and left in the plan's or report's notes. Other docs point to that home instead of repeating the fact. Older notes stay as they are: nothing already written is cut to fit this.
 - Every feature must serve at least one design pillar. A feature that serves none goes to the parking lot.
 - Never push to a remote unless the owner asks.
 
@@ -51,7 +52,7 @@ Only the owner moves the project on. Pre-production ends when its checklist in `
 The owner's usage limit sets the project's pace, so sessions spend tokens carefully. Each turn re-sends the whole conversation, so what's read stays in the cost until the session ends. Never trade away quality or tests to save tokens. How strictly these apply is the "Token use" value in Kit settings.
 
 - **Read only what's needed.** Search for a heading or name first, then read that range. Don't read whole long docs (`docs/DESIGN.md`, `docs/DECISIONS.md`, and the "Long docs" listed in `CLAUDE.md`) or print several whole files in one command. Don't re-read a file that's already in the conversation and unchanged.
-- **Keep sessions short.** `/plan-it` splits big sub-steps into build parts, and `/code` builds one part per session. Start a new chat for an unrelated topic.
+- **Keep sessions short.** `/plan-it` splits big sub-steps into build parts, and `/code` builds one part per session. A part that runs long carries on to its end instead of handing off mid-part, so the owner isn't left waiting on a question. Start a new chat for an unrelated topic.
 - **Keep long docs easy to search.** Give a long reference doc a contents table at the top. When `docs/DECISIONS.md` grows long, move a finished phase's entries, unchanged, to `docs/DECISIONS_PHASE_<n>.md`, and add it to "Project docs" in `CLAUDE.md`.
 
 ## Session types and commands
