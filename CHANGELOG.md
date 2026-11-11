@@ -7,7 +7,7 @@ One entry per kit version. `tools/install.ps1 -Update` prints every entry newer 
 
 Versions: **patch** fixes kit-owned files only; **minor** adds features, with any manual steps optional; **major** has at least one required manual step. Projects on the old mixed layout count as 0.x.
 
-## Unreleased
+## 1.2.0 — 2026-11-10
 
 ### Kit-owned changes
 
